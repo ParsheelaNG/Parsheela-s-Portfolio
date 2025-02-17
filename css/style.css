@@ -170,7 +170,6 @@ body{
     margin:50px auto;
     border-radius: 25px;
     background-color: #fff;
-    /* border:1px solid; */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 .projectcards{
@@ -178,35 +177,41 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap:30px;
     padding:25px;
 }
 .card{
     background: linear-gradient(to right, #28d07c9d, #ffffff);
     border:2px solid rgba(165, 42, 42, 0.626);
     padding:25px;
-    width:35%;
-    margin:10px;
+    width:30%;
+    min-width: 280px; 
     border-radius: 25px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .card h3{
     color: brown;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .card p{
     padding:10px;
+    margin:10px;
     
 }
 .card .btn{
     border: 1px solid;
     border-radius: 15px;
-    margin-top:10px;
-   padding: 5px 10px;
-   background: linear-gradient(to right, #c521b7ac, #2524243f);
-   color:black;
-   text-decoration: none;
-   transition: all 0.3s ease;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c521b7ac, #2524243f);
+    color:black;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 .card:hover{
     transform: scale(1.05);
@@ -221,46 +226,72 @@ body{
 
 
 /* Skills styling */
-.skills{
+.skills {
     text-align: center;
-    padding:25px;
-    width:80%;
+    padding: 25px;
+    width: 80%;
     margin: 50px auto;
     border-radius: 25px;
     background-color: #fff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
-.cards{
+
+
+.cards {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; 
+    flex-wrap: wrap; 
     padding:25px;
-    gap:30px;
+    gap: 30px;
 }
-.skillcard{
+.skillcard {
     background: linear-gradient(to right, #ab9b54ac, #bcb6b63f);
-    border:2px solid rgb(50, 42, 42);
-    padding:25px;
-    width:35%;
-    margin:10px;
+    border: 2px solid rgb(50, 42, 42);
+    padding: 25px;
+    width: 30%; 
+    min-width: 280px; 
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.skillcard h3{
-    padding:10px;
+.skillcard h3 {
+    padding: 10px;
     color: rgb(134, 8, 8);
+    text-align: center;
 }
-.skillcard p{
-    padding:10px;
+
+.skillcard ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
 }
-.skillcard ul li{
-    list-style-type: disc;
+
+.skillcard ul li {
+    list-style-type: none;
+    background-color: #f8d478;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(92, 26, 26);
+    width: auto; 
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-.skillcard:hover{
-    transform: scale(1.15);
-    cursor:pointer;
-    transition: transform 0.6s ease-in-out;
+
+.skillcard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
     background-color: rgba(238, 150, 78, 0.205);
 }
+
 
 /* Contact styling */
 .contact{
@@ -332,7 +363,7 @@ form button:hover{
 /* Default styles already set above */
 
 /* Responsive Design Adjustments */
-@media (max-width: 1024px) { /* Tablets & Small Laptops */
+@media (max-width: 1024px) { 
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -352,13 +383,12 @@ form button:hover{
         width: 80%;
     }
 
-    .card, .skillcard {
+    .card{
         width: 45%;
-    }
 
+    }
     .contact-details {
         flex-direction: column;
-        text-align: center;
     }
 
     .info, .details {
@@ -366,7 +396,7 @@ form button:hover{
     }
 }
 
-@media (max-width: 768px) { /* Mobile & Smaller Tablets */
+@media (max-width: 768px) { 
     .logo {
         width: 100%;
     }
@@ -385,7 +415,7 @@ form button:hover{
         width: 200px;
     }
 
-    .card, .skillcard {
+    .card{
         width: 100%;
         margin: 10px 0;
     }
@@ -405,7 +435,7 @@ form button:hover{
     }
 }
 
-@media (max-width: 480px) { /* Small Mobile Screens */
+@media (max-width: 480px) { 
     .navlinks {
         flex-direction: column;
         text-align: center;
@@ -425,7 +455,7 @@ form button:hover{
         width: 180px;
     }
 
-    .card, .skillcard {
+    .card {
         width: 100%;
     }
 
@@ -438,10 +468,6 @@ form button:hover{
         flex-wrap: wrap;
         gap: 20px;
     }
-
-    .skillcard {
-        width: 45%; 
-    }
 }
 
 @media (max-width: 768px) { 
@@ -449,15 +475,49 @@ form button:hover{
         flex-direction: column;
         align-items: center;
     }
+}
 
+@media (max-width: 1024px) {
+    .cards {
+        gap: 20px; 
+    }
     .skillcard {
-        width: 80%; 
+        width: 45%; 
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center; 
+    }
     .skillcard {
-        width: 95%; 
+        width: 90%; 
+        min-width: unset; 
+    }
+}
+
+@media (min-width: 1025px) {
+    .projects, .skills {
+        max-width: 1200px; 
+        width: 65%; 
+        margin: 0 auto; 
+    }
+
+    .projectcards, .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 20px;
+    }
+
+    .card, .skillcard {
+        width: 32%; 
+        min-width: 300px; 
+    }
+
+    .projects h2, .skills h2 {
+        text-align: center; 
     }
 }
 
