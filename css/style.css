@@ -433,3 +433,31 @@ form button:hover{
         width: 90%;
     }
 }
+@media (max-width: 1024px) { 
+    .cards {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .skillcard {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) { 
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skillcard {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) { 
+    .skillcard {
+        width: 95%; 
+    }
+}
+
