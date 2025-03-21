@@ -293,6 +293,69 @@ body{
 }
 
 
+/* Internships styling */
+.internships {
+    text-align: center;
+    padding: 30px;
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.internships h2{
+    padding-bottom:10px;
+}
+
+.internship-card {
+    /* background: linear-gradient(to right, #d9a7e888, #ecedeefa); */
+    background-color:#dce9e680 ;
+    border: 2px solid rgb(100, 5, 13);;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.internship-card h3 {
+    color: brown;
+    margin-bottom: 10px;
+}
+
+.internship-card p, .internship-card ul {
+    padding: 10px;
+    margin: 10px;
+    color: #000;
+    line-height: 1.6;   
+}
+
+.internship-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.internship-card ul li{
+    list-style-type: none;
+}
+
+.internship-card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.internship-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0px 10px 30px rgba(178, 48, 48, 0.15);
+}
+
+
+
 /* Certificates styling */
 .certifications{
     text-align: center;
@@ -318,6 +381,7 @@ body{
 }
 .c-head:hover {
     transform: scale(1.02);
+    cursor: pointer;
     background: linear-gradient(to right, #2a28295f, #f6f2f24d);
 }
 .c-head h4 {
